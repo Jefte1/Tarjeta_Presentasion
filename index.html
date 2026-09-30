@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Digital - Jefté Valdéz</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f1f5f9;
+        }
+
+        .font-serif-name {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        .btn-shadow:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pulse animation for notice */
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.02); }
+        }
+        .pulse-effect {
+            animation: subtle-pulse 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-0 sm:p-4 bg-slate-100">
+
+    <!-- Card Container (Simulates Mobile Screen Viewport) -->
+    <div class="w-full max-w-md bg-white min-h-screen sm:min-h-0 sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col justify-between relative pb-8">
+
+        <div>
+            <!-- Header Background Image -->
+            <div class="relative h-48 w-full bg-slate-800">
+                <img 
+                    src="servicio tecnico.jpg" 
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80';" 
+                    alt="Servicio Técnico Banner" 
+                    class="w-full h-full object-cover opacity-90"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
+            </div>
+
+            <!-- Overlapping Circular Logo Avatar -->
+            <div class="relative flex justify-center -mt-24 px-4">
+                <div class="relative w-44 h-44 rounded-full p-1 bg-white shadow-xl flex items-center justify-center">
+                    <img 
+                        src="logo.jpg" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/0f172a/ffffff?text=Jeft%C3%A9+Vald%C3%A9z';" 
+                        alt="Logo Servicio Técnico Autorizado" 
+                        class="w-full h-full object-cover rounded-full border-2 border-slate-100"
+                    />
+                </div>
+            </div>
+
+            <!-- Profile Info Section -->
+            <div class="text-center px-6 mt-3">
+                <h1 class="font-serif-name text-4xl sm:text-4xl text-slate-900 font-bold tracking-wide italic">
+                    Jefté Valdéz
+                </h1>
+                <h2 class="text-slate-800 font-extrabold text-lg uppercase tracking-widest mt-1">
+                    TÉCNICO
+                </h2>
+                <p class="text-slate-600 italic text-sm mt-3 leading-relaxed font-normal px-2">
+                    Técnico en computación, lavadoras y secadoras y electricidad residencial, listo para brindar soporte y soluciones efectivas.
+                </p>
+            </div>
+
+            <!-- Interactive Action Buttons -->
+            <div class="px-5 mt-6 space-y-4">
+                
+                <!-- Button 1: UltraViewer Remote Support -->
+                <a 
+                    href="https://www.ultraviewer.net/es/UltraViewer_setup_6.6_es.exe" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="btn-shadow flex items-center bg-[#004bb5] hover:bg-[#003da3] active:bg-[#003080] rounded-xl overflow-hidden p-1 transition-all group"
+                >
+                    <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg p-1.5 flex items-center justify-center ml-1">
+                        <img 
+                            src="ULTRAVIEWER.jpg" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/100x100/004bb5/ffffff?text=UV';" 
+                            alt="UltraViewer Icon" 
+                            class="w-full h-full object-contain rounded"
+                        />
+                    </div>
+                    <span class="flex-1 text-center font-bold text-white text-xs sm:text-sm tracking-wide px-3 uppercase leading-tight py-2">
+                        NECESITO INSTALAR APLICACIÓN PARA SOPORTE REMOTO
+                    </span>
+                </a>
+
+                <!-- Button 2: WhatsApp Chat -->
+                <a 
+                    href="https://wa.me/50257576104" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="btn-shadow flex items-center bg-[#00c25e] hover:bg-[#00ab52] active:bg-[#009447] rounded-xl overflow-hidden p-1 transition-all group"
+                >
+                    <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg p-1 flex items-center justify-center ml-1">
+                        <img 
+                            src="whatsapp.png" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/100x100/00c25e/ffffff?text=WA';" 
+                            alt="WhatsApp Icon" 
+                            class="w-full h-full object-contain rounded"
+                        />
+                    </div>
+                    <span class="flex-1 text-center font-bold text-white text-xs sm:text-sm tracking-wide px-3 uppercase leading-tight py-2">
+                        NECESITO COMUNICARME POR WHATSAPP
+                    </span>
+                </a>
+
+                <!-- Button 3: Workshop Location -->
+                <button 
+                    onclick="openModal('modal-location')" 
+                    class="w-full btn-shadow flex items-center bg-gradient-to-r from-[#00b975] via-[#00a887] to-[#e75343] hover:opacity-95 active:opacity-90 rounded-xl overflow-hidden p-1 transition-all group"
+                >
+                    <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg p-2 flex items-center justify-center ml-1">
+                        <!-- Custom Location Pin Icon matching original gradient look -->
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-cyan-400 via-orange-400 to-red-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
+                    </div>
+                    <span class="flex-1 text-center font-bold text-slate-900 text-xs sm:text-sm tracking-wide px-3 uppercase leading-tight py-2">
+                        NECESITO SABER DONDE LOCALIZAR EL TALLER
+                    </span>
+                </button>
+
+                <!-- Button 4: Banrural Transfer Details -->
+                <button 
+                    onclick="openModal('modal-bank')" 
+                    class="w-full btn-shadow flex items-center bg-[#1d6b52] hover:bg-[#165641] active:bg-[#104332] rounded-xl overflow-hidden p-1 transition-all group"
+                >
+                    <div class="w-12 h-12 flex-shrink-0 bg-white rounded-lg p-1.5 flex items-center justify-center ml-1">
+                        <img 
+                            src="BANRURAL.png" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/100x100/1d6b52/ffffff?text=BANRURAL';" 
+                            alt="Banrural Logo" 
+                            class="w-full h-full object-contain rounded"
+                        />
+                    </div>
+                    <span class="flex-1 text-center font-bold text-white text-xs sm:text-sm tracking-wide px-3 uppercase leading-tight py-2">
+                        NECESITO HACER UNA TRANSFERENCIA
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="mt-8 text-center text-xs text-slate-400">
+            <p>© <span id="year"></span> Jefté Valdéz - Servicio Técnico Autorizado</p>
+            <p class="text-[10px] text-slate-300 mt-1">Guatemala • Tel: +502 5757 6104</p>
+        </div>
+
+    </div>
+
+    <!-- MODAL 1: BANRURAL TRANSFER DETAILS -->
+    <div id="modal-bank" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative transform transition-all scale-95 duration-200" id="modal-bank-card">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal('modal-bank')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full flex items-center justify-center bg-slate-100">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Bank Header -->
+            <div class="flex items-center space-x-3 border-b border-slate-100 pb-4 mb-4">
+                <div class="w-14 h-10 bg-slate-50 border border-slate-200 rounded-lg p-1 flex items-center justify-center">
+                    <img src="BANRURAL.png" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1d6b52/ffffff?text=BANRURAL';" alt="Banrural" class="max-h-full object-contain">
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-800 text-lg">Datos Bancarios</h3>
+                    <p class="text-xs text-emerald-600 font-semibold uppercase">Banrural Guatemala</p>
+                </div>
+            </div>
+
+            <!-- Account Details -->
+            <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+                <div>
+                    <span class="text-xs text-slate-500 uppercase font-bold tracking-wider">Banco</span>
+                    <p class="text-slate-800 font-semibold text-sm">BANRURAL</p>
+                </div>
+                <div>
+                    <span class="text-xs text-slate-500 uppercase font-bold tracking-wider">Titular de la Cuenta</span>
+                    <p class="text-slate-900 font-bold text-base">Jefté Valdéz</p>
+                </div>
+                <div>
+                    <span class="text-xs text-slate-500 uppercase font-bold tracking-wider">Tipo de Cuenta</span>
+                    <p class="text-slate-800 font-semibold text-sm">Monetaria / Ahorros</p>
+                </div>
+                <div>
+                    <span class="text-xs text-slate-500 uppercase font-bold tracking-wider">Número de Cuenta</span>
+                    <div class="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-300 mt-1">
+                        <span id="account-number" class="font-mono text-base font-bold text-emerald-800 tracking-wider">3285029927</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy Action Button -->
+            <div class="mt-5">
+                <button 
+                    id="copy-btn" 
+                    onclick="copyAccountNumber()" 
+                    class="w-full bg-[#1d6b52] hover:bg-[#165641] active:bg-[#104332] text-white font-bold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition-all"
+                >
+                    <i class="fa-regular fa-copy text-lg"></i>
+                    <span id="copy-btn-text">Copiar Número de Cuenta</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL 2: WORKSHOP LOCATION DETAILS -->
+    <div id="modal-location" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative transform transition-all scale-95 duration-200">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal('modal-location')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full flex items-center justify-center bg-slate-100">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Location Header -->
+            <div class="flex items-center space-x-3 border-b border-slate-100 pb-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-800 text-lg">Ubicación del Taller</h3>
+                    <p class="text-xs text-slate-500">Servicio Técnico Profesional</p>
+                </div>
+            </div>
+
+            <!-- Address Description -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 mb-4 text-sm text-slate-700">
+                <p class="font-semibold text-slate-800 mb-1">Dirección / Referencia:</p>
+                <p class="leading-relaxed">Taller de Mantenimiento y Reparación Multiservicios Domésticos, Huehuetenango, Guatemala.</p>
+                <div class="mt-3 pt-2 border-t border-slate-200 text-xs text-slate-500">
+                    <i class="fa-regular fa-clock mr-1"></i> Horario: Lunes a Sábado - 8:00 AM a 6:00 PM
+                </div>
+            </div>
+
+            <!-- Direct Maps Button -->
+            <a 
+                href="https://maps.app.goo.gl/CefQFwJraSYs39G97" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition-all"
+            >
+                <i class="fa-solid fa-location-arrow"></i>
+                <span>Abrir en Google Maps</span>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Open Modal Helper
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        }
+
+        // Close Modal Helper
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        // Close modal on clicking backdrop
+        window.addEventListener('click', function(event) {
+            const bankModal = document.getElementById('modal-bank');
+            const locModal = document.getElementById('modal-location');
+            if (event.target === bankModal) closeModal('modal-bank');
+            if (event.target === locModal) closeModal('modal-location');
+        });
+
+        // Copy Account Number with Copy Command & Visual Feedback
+        function copyAccountNumber() {
+            const accountNumberText = document.getElementById('account-number').innerText.trim();
+            const btn = document.getElementById('copy-btn');
+            const btnText = document.getElementById('copy-btn-text');
+
+            // Fallback copy using hidden input / execCommand
+            const tempInput = document.createElement('input');
+            tempInput.value = accountNumberText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // Mobile compatibility
+            
+            try {
+                document.execCommand('copy');
+                
+                // Visual feedback on success
+                btn.classList.remove('bg-[#1d6b52]', 'hover:bg-[#165641]');
+                btn.classList.add('bg-emerald-700');
+                btnText.innerHTML = '<i class="fa-solid fa-check mr-1"></i> ¡Número Copiado!';
+
+                setTimeout(() => {
+                    btn.classList.remove('bg-emerald-700');
+                    btn.classList.add('bg-[#1d6b52]', 'hover:bg-[#165641]');
+                    btnText.innerText = 'Copiar Número de Cuenta';
+                }, 2500);
+
+            } catch (err) {
+                alert('No se pudo copiar automáticamente. Por favor copia manualmente: ' + accountNumberText);
+            } finally {
+                document.body.removeChild(tempInput);
+            }
+        }
+    </script>
+</body>
+</html>
